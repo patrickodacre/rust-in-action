@@ -5,11 +5,12 @@
 
 mod ifelse;
 mod iteration;
+mod matching;
 mod numbers;
 
 fn main()
 {
-    ifelse::do_ifelse();
+    matching::do_matching();
 }
 
 fn do_numbers()
