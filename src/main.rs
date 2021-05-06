@@ -3,13 +3,13 @@
 #![allow(unused_assignments)]
 #![allow(unused_imports)]
 
+mod ifelse;
 mod iteration;
 mod numbers;
 
 fn main()
 {
-    // iteration::do_iteration();
-    iteration::do_iteration_2();
+    ifelse::do_ifelse();
 }
 
 fn do_numbers()
