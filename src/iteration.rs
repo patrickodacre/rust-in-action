@@ -50,3 +50,31 @@ pub fn do_iteration()
         // println!("{:?}", item == &item);
     }
 }
+
+pub fn do_forever()
+{
+    // not idiomatic Rust
+    // while true {}
+
+    // idiomatic Rust
+    loop {}
+}
+
+pub fn do_iteration_2()
+{
+    let mut i = 0;
+
+    // exclusive
+    for _ in 0..10 {
+        println!("{:?}", i);
+        i = i + 1;
+    }
+
+    let mut i = 0;
+
+    // inclusive
+    for _ in 0..=10 {
+        println!("{:?}", i);
+        i = i + 1;
+    }
+}

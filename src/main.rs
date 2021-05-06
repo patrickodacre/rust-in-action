@@ -8,7 +8,8 @@ mod numbers;
 
 fn main()
 {
-    iteration::do_iteration();
+    // iteration::do_iteration();
+    iteration::do_iteration_2();
 }
 
 fn do_numbers()
