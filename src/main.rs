@@ -3,10 +3,12 @@
 #![allow(unused_assignments)]
 #![allow(unused_imports)]
 
+mod iteration;
 mod numbers;
 
 fn main()
 {
+    iteration::do_iteration();
 }
 
 fn do_numbers()
