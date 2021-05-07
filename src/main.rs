@@ -3,22 +3,15 @@
 #![allow(unused_assignments)]
 #![allow(unused_imports)]
 
+use std::ops::{Add, Sub};
+
 mod ifelse;
 mod iteration;
 mod matching;
 mod numbers;
+mod traits_generics_1;
 
 fn main()
 {
-    matching::do_matching();
-}
-
-fn do_numbers()
-{
-    // Numbers
-    // numbers::print_types();
-    // numbers::print_notations();
-    // numbers::conversion();
-    // numbers::not_a_number();
-    // numbers::num_crate();
+    traits_generics_1::run();
 }
