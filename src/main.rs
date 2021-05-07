@@ -10,10 +10,11 @@ mod ifelse;
 mod iteration;
 mod matching;
 mod numbers;
+mod slices;
 mod strings;
 mod traits_generics_1;
 
 fn main()
 {
-    strings::run();
+    slices::run();
 }
