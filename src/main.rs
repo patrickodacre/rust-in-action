@@ -10,9 +10,10 @@ mod ifelse;
 mod iteration;
 mod matching;
 mod numbers;
+mod strings;
 mod traits_generics_1;
 
 fn main()
 {
-    arrays::run();
+    strings::run();
 }
