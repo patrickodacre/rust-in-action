@@ -5,6 +5,7 @@
 
 use std::ops::{Add, Sub};
 
+mod arrays;
 mod ifelse;
 mod iteration;
 mod matching;
@@ -13,5 +14,5 @@ mod traits_generics_1;
 
 fn main()
 {
-    traits_generics_1::run();
+    arrays::run();
 }
