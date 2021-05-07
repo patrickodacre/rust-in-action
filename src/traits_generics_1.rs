@@ -1,5 +1,3 @@
-// I wasn't able to get this to work as an associated type to the HasHealth trait
-
 pub fn run()
 {
     // lifetimes, generics and traits::
@@ -14,6 +12,7 @@ pub fn run()
     println!("{:?}", m.hp);
 }
 
+// I wasn't able to get this to work as an associated type to the HasHealth trait
 type Hp = u32;
 
 struct Knight
