@@ -1,3 +1,6 @@
-fn main() {
-    println!("Hello, world!");
+mod cube_sats;
+
+fn main()
+{
+    cube_sats::run();
 }
