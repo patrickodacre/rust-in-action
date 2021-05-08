@@ -4,7 +4,9 @@
 mod enums;
 mod errors;
 mod new_type;
+mod traits;
 
-fn main() {
-    enums::run();
+fn main()
+{
+    traits::run();
 }
