@@ -1,3 +1,4 @@
+//! Basic Traits Module
 use std::f32::NAN;
 use std::fmt;
 
@@ -8,12 +9,14 @@ pub fn run()
     println!("{}", thing);
 }
 
+/// Represents a Type of Thing
 enum ThingType
 {
     Big,
     Small,
 }
 
+/// A Thing is something really cool.
 struct Thing
 {
     one: f32,
