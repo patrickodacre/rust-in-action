@@ -1,6 +1,11 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
 mod cube_sats;
+mod interior_mutability;
+
 
 fn main()
 {
-    cube_sats::run();
+    interior_mutability::run();
 }
