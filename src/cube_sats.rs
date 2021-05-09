@@ -43,19 +43,15 @@ struct Mailbox
     messages: Vec<Message>,
 }
 
-enum MailboxError
-{
-    FailedToSend,
-    FailedToDeliver,
-}
-
 impl Mailbox
 {
-    fn post(&mut self, message: Message) -> Result<(), MailboxError>
+    fn new() -> Self {
+        Mailbox {messages: Vec::<Message>::new()}
+    }
+
+    fn post(&mut self, message: Message)
     {
         self.messages.push(message);
-
-        Ok(())
     }
 
     fn deliver(&mut self, recipient: &CubeSat) -> Option<Message>
@@ -84,9 +80,9 @@ impl GroundStation
 {
     /// send a message to a CubeSat
     /// it's ok for this function to take ownership of the message
-    fn send(sat: &mut CubeSat, msg: Message)
+    fn send(mailbox: &mut Mailbox, msg: Message)
     {
-        sat.mailbox.messages.push(msg);
+        mailbox.post(msg)
     }
 }
 
@@ -107,11 +103,16 @@ pub fn run()
     let c_status = check_status(&sat_c);
     println!("a: {:?}, b: {:?}, c: {:?}", a_status, b_status, c_status);
 
-    // GroundStation::send(&mut sat_a, "Some message".to_string());
-    // println!("Got a message {:?}", sat_a.recv());
+    let mut mailbox = Mailbox::new();
 
-    // GroundStation::send(&mut sat_a, "This is a great message".to_string());
-    // println!("Got a message {:?}", sat_a.recv());
+    let msg = Message {to: sat_a.id, body: "Some Message".to_string()};
+
+    // I don't need the msg after this, so I can give ownership to the send() function
+    GroundStation::send(&mut mailbox, msg);
+
+    let msg = sat_a.recv(&mut mailbox);
+
+    println!("msg received {:?}", msg);
 }
 
 fn check_status(cube_sat: &CubeSat) -> StatusMessage
