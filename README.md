@@ -1,3 +1,3 @@
-# Rust in Motion
+# Rust in Action
 
 Exercises and notes from working through the [Rust in Action book](https://www.manning.com/books/rust-in-action).
