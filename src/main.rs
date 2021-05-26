@@ -1,3 +1,8 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+
+mod data;
+
 fn main() {
-    println!("Hello, world!");
+    data::do_data();
 }
